@@ -589,7 +589,7 @@ void* FillBlock64(dynablock_t* block, uintptr_t addr, int alternate, int is32bit
                     k=i2;
             }*/
             if(k!=-1) {
-                if(!helper.insts[i].barrier_maybe)
+                if(helper.insts[i].barrier_maybe)
                     helper.insts[k].x64.barrier |= BARRIER_FULL;
                 helper.insts[i].x64.jmp_insts = k;
             }
